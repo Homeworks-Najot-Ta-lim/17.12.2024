@@ -9,17 +9,10 @@ import FlightBooking from "./pages/FlightBooking";
 import Login from "./pages/Login";
 import Navbar from "./components/navbar";
 import ProtectedRoute from "./components/ProtectedRoute"
-import Profile from "./pages/Profile";
+
 import OrdersList from "./pages/OrdersList";
+import UserProfile from "./pages/Profile";
 
-// Pages
-// import FlightBooking from "./pages/FlightBooking";
-// import Login from "./pages/Login";
-// import OrdersList from "./pages/OrdersList";
-
-// import ProtectedRoute from "./components/ProtectedRoute";
-// import Navbar from "./components/NavBar";
-// import UserProfile from "./pages/UserProfile";
 
 const App = () => {
   return (
@@ -42,7 +35,7 @@ const App = () => {
               path='/profile'
               element={
                 <ProtectedRoute>
-                  <Profile />
+                  <UserProfile />
                 </ProtectedRoute>
               }
             />
