@@ -30,15 +30,13 @@ import dayjs from "dayjs";
 const OrdersList = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const {orders} = useSelector((state) => state.flights)
-  // const [orders, setOrders] = useState([]);
+  // const {orders} = useSelector((state) => state.flights)
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const fetchOrders = async () => {
       const allOrders = await getUserFlightOrders(user.id)
-      dispatch(addOrder({
-        allOrders
-      }))
+      setOrders(allOrders)
     };
 
     if (user) {

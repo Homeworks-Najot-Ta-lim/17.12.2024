@@ -19,13 +19,14 @@ import {
 
   import { createFlightOrder } from "../services/flightService";
   import dayjs from "dayjs";
-import { addOrder, setCurrentBooking } from "../store/flightSlice";
+import {  addOrder, setCurrentBooking } from "../store/flightSlice";
 
   const FlightBooking = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { isAuthenticated, user } = useSelector((state) => state.auth);
     const { currentBooking } = useSelector((state) => state.flights);
+    
   
     const handleSubmit = async (e) => {
       e.preventDefault();
@@ -52,6 +53,9 @@ import { addOrder, setCurrentBooking } from "../store/flightSlice";
           ...currentBooking,
           userId: user.id
         }
+        const newOrder = await createFlightOrder(order)
+        dispatch(addOrder(newOrder))
+
       } catch (error) {
         console.log(error)
       }

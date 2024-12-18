@@ -1,12 +1,14 @@
 {
   "flights": [
-    {    "destination": "Termiz",
-    "flyDate": "11.10.2024",
-    "returnDate": null,
-    "children": 0,
-    "seats": 1,
-    "userId": 1
-}
+    {
+      "id": "1138",
+      "destination": "dwwdwd (Edited)",
+      "flyDate": "2024-12-18T19:00:00.000Z",
+      "returnDate": "2024-12-19T19:00:00.000Z",
+      "children": 2,
+      "seats": 1,
+      "userId": 1
+    }
   ],
   "users": []
 }
