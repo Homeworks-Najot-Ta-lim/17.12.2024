@@ -53,8 +53,17 @@ import {  addOrder, setCurrentBooking } from "../store/flightSlice";
           ...currentBooking,
           userId: user.id
         }
-        const newOrder = await createFlightOrder(order)
-        dispatch(addOrder(newOrder))
+        await createFlightOrder(order)
+        // const newOrder = await createFlightOrder(order)
+        // dispatch(addOrder(newOrder))
+        toast.success("Flight order created",{
+          position: "bottom-right",
+          autoClose: 3000,
+        })
+        setTimeout(()=>{
+            navigate("/orders")
+        },3000)
+        
 
       } catch (error) {
         console.log(error)

@@ -30,7 +30,7 @@ import dayjs from "dayjs";
 const OrdersList = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  // const {orders} = useSelector((state) => state.flights)
+
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -64,6 +64,7 @@ const OrdersList = () => {
       await deleteFlightOrder(orderId);
       dispatch(removeOrder(orderId));
       toast.success("Order canceled successfully");
+
     } catch (error) {
       console.error(error);
       toast.error("Failed to cancel order");
