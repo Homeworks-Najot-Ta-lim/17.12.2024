@@ -1,0 +1,12 @@
+{
+  "flights": [
+    {    "destination": "Termiz",
+    "flyDate": "11.10.2024",
+    "returnDate": null,
+    "children": 0,
+    "seats": 1,
+    "userId": 1
+}
+  ],
+  "users": []
+}
